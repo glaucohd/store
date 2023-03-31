@@ -1,16 +1,9 @@
-# store
+# Instrução
 
-A new Flutter project.
+- Faça do clone do repositório e na raiz do projeto, renomeie o arquivo .env.exemple para .env.
+- Adicione sua API_KEY, caso não tenha uma você pode criar atraves do site [Google Developers Console](https://cloud.google.com/?hl=pt-br)
 
-## Getting Started
+## Desafio do projeto
 
-This project is a starting point for a Flutter application.
+Criar um projeto de interface para um aplicativo que possui campos de login com opções de autenticação pelo Facebook e Google. Após o login, o usuário é redirecionado para uma tela de listagem de produtos em duas colunas com lazy loading. Há um menu drawer com opções de perfil, meus produtos, configurações e logout. Ao selecionar um produto, uma nova tela é apresentada com um mapa do Google Maps mostrando a localização do usuário, um thumbnail do produto com uma descrição e um botão de compra. Após clicar no botão, um modal pergunta se confirma a compra ou não, exibindo uma mensagem de sucesso em caso afirmativo e cancelando o modal em caso negativo.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
