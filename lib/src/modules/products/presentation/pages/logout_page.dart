@@ -43,15 +43,15 @@ class LogoutPage extends StatelessWidget {
             ),
             actions: <Widget>[
               TextButton(
-                child: const Text('Sim'),
-                onPressed: () {
-                  controller.logout();
-                },
-              ),
-              TextButton(
                 child: const Text('Não'),
                 onPressed: () {
                   controller.popToPage();
+                },
+              ),
+              TextButton(
+                child: const Text('Sim'),
+                onPressed: () {
+                  controller.logout();
                 },
               ),
             ],

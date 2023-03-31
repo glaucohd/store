@@ -72,9 +72,8 @@ class AuthController extends ChangeNotifier {
   }
 
   void navigateTo({required String route}) {
-    NavigatorService.instance.key.currentState?.pushReplacementNamed(
-      route,
-    );
+    NavigatorService.instance.key.currentState
+        ?.pushNamedAndRemoveUntil(route, (Route<dynamic> route) => false);
   }
 
   void popToPage() {
