@@ -8,7 +8,7 @@
 <p>Criar um projeto de interface para um aplicativo que possui campos de login com opções de autenticação pelo Facebook e Google. Após o login, o usuário é redirecionado para uma tela de listagem de produtos em duas colunas com lazy loading. Há um menu drawer com opções de perfil, meus produtos, configurações e logout.</p>
 <p>Ao selecionar um produto, uma nova tela é apresentada com um mapa do <strong>Google Maps</strong> mostrando a localização do usuário, um thumbnail do produto com uma descrição e um botão de compra. Após clicar no botão, um modal pergunta se confirma a compra ou não, exibindo uma mensagem de sucesso em caso afirmativo e cancelando o modal em caso negativo.</p>
 
-Link do apk para download: [Drive](https://drive.google.com/file/d/1y-VCls_Q8aF92b3-GzPy0d-I22e3VNy_/view) 
+Link do apk para download: [Drive](https://drive.google.com/file/d/11W5aCVrRB11SyrAaMGKdNDyvGGi25LTO/view?usp=share_link) 
 
 ## Conclusão
 
