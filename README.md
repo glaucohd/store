@@ -1,6 +1,6 @@
 # Instrução
 
-- Faça do clone do repositório e na raiz do projeto, renomeie o arquivo .env.exemple para .env.
+- Faça do clone do repositório e na raiz do projeto, renomeie o arquivo .env.exemple para .env
 - Adicione sua API_KEY, caso não tenha uma você pode criar atraves do site [Google Developers Console](https://cloud.google.com/?hl=pt-br)
 
 ## Desafio do projeto
