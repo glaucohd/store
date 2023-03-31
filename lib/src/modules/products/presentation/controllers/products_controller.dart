@@ -30,6 +30,7 @@ class ProductsController extends ChangeNotifier {
     cleanCacheImage();
     final response = await getProductsUsecase();
     listProducts = parseEntityToVO(response: response);
+    await getPosition();
     notifyListeners();
   }
 

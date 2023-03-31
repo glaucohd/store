@@ -30,7 +30,7 @@ class SocialButtonWidget extends StatelessWidget {
                   controller.navigateTo(route: "/products");
                 }
               },
-              text: Constants.signInWithFacebook,
+              text: Constants.signInWithGoogle,
             ),
             const SizedBox(height: 16),
             FacebookAuthButton(
