@@ -27,7 +27,7 @@ class SocialButtonWidget extends StatelessWidget {
               onPressed: () async {
                 final result = await controller.signInWithGoogle();
                 if (result == true) {
-                  controller.navigateTo(route: "/products");
+                  controller.navigateTo(route: "/base");
                 }
               },
               text: Constants.signInWithGoogle,
@@ -44,7 +44,7 @@ class SocialButtonWidget extends StatelessWidget {
               onPressed: () async {
                 final result = await controller.signInWithFacebook();
                 if (result == true) {
-                  controller.navigateTo(route: "/products");
+                  controller.navigateTo(route: "/base");
                 }
               },
               text: Constants.signInWithFacebook,

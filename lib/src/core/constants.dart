@@ -14,7 +14,7 @@ class Constants {
   static String products = "Produtos";
   static String news = "Novidades";
   static String makePurchase = "Realizar compra";
-  static String doYouWantToMakeThePurchase = "Deseja realizar a compra?";
+  static String doYouWantToMakeThePurchase = "Confirmar a compra?";
   static String purchaseMadeSuccessfully = "Compra realizada com sucesso!!";
   static String purchase = "Comprar";
   static String welcome = "Bem-vindo";

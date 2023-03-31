@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../../../../core/constants.dart';
 import '../../../auth/presentation/controllers/auth_controller.dart';
+import '../controllers/products_controller.dart';
 
 class MenuDrawerWidget extends StatelessWidget {
   const MenuDrawerWidget({
@@ -12,12 +13,12 @@ class MenuDrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<AuthController>(builder: (context, controller, child) {
-      return Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            SizedBox(
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          Consumer<AuthController>(builder: (context, controller, child) {
+            return SizedBox(
               height: 180,
               child: DrawerHeader(
                 decoration: const BoxDecoration(
@@ -83,46 +84,61 @@ class MenuDrawerWidget extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.person,
-              ),
-              title: Text(Constants.profiile),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.shopping_cart,
-              ),
-              title: Text(Constants.myProducts),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.settings,
-              ),
-              title: Text(Constants.settings),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(
-                Icons.logout,
-              ),
-              title: Text(Constants.logout),
-              onTap: () async {
-                controller.logout(context: context);
-              },
-            ),
-          ],
-        ),
-      );
-    });
+            );
+          }),
+          Consumer<ProductsController>(builder: (context, controller, child) {
+            return Column(
+              children: [
+                ListTile(
+                  leading: const Icon(
+                    Icons.list,
+                  ),
+                  title: const Text("Lista de produtos"),
+                  onTap: () {
+                    controller.jumpToPage(indexPage: 0);
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(
+                    Icons.person,
+                  ),
+                  title: Text(Constants.profiile),
+                  onTap: () {
+                    controller.jumpToPage(indexPage: 1);
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(
+                    Icons.shopping_cart,
+                  ),
+                  title: Text(Constants.myProducts),
+                  onTap: () {
+                    controller.jumpToPage(indexPage: 2);
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(
+                    Icons.settings,
+                  ),
+                  title: Text(Constants.settings),
+                  onTap: () {
+                    controller.jumpToPage(indexPage: 3);
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(
+                    Icons.logout,
+                  ),
+                  title: Text(Constants.logout),
+                  onTap: () async {
+                    controller.jumpToPage(indexPage: 4);
+                  },
+                ),
+              ],
+            );
+          })
+        ],
+      ),
+    );
   }
 }

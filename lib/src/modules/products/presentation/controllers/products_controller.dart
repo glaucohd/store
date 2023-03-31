@@ -21,6 +21,7 @@ class ProductsController extends ChangeNotifier {
   late GoogleMapController _mapsController;
   get mapsController => _mapsController;
   final GetProductsUsecaseImpl getProductsUsecase;
+  final PageController pageController = PageController();
 
   ProductsController({
     required this.getProductsUsecase,
@@ -125,5 +126,10 @@ class ProductsController extends ChangeNotifier {
 
   void navigateTo({required String route}) {
     NavigatorService.instance.key.currentState?.pushNamed(route);
+  }
+
+  void jumpToPage({required int indexPage}) {
+    pageController.jumpToPage(indexPage);
+    notifyListeners();
   }
 }

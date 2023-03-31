@@ -56,9 +56,7 @@ class AuthController extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> logout({
-    required BuildContext context,
-  }) async {
+  Future<void> logout() async {
     switch (socialNetwork) {
       case "facebook":
         await FacebookAuth.instance.logOut();
@@ -77,5 +75,9 @@ class AuthController extends ChangeNotifier {
     NavigatorService.instance.key.currentState?.pushReplacementNamed(
       route,
     );
+  }
+
+  void popToPage() {
+    NavigatorService.instance.key.currentState?.pop();
   }
 }
