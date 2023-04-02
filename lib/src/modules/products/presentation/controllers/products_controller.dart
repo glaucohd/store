@@ -43,7 +43,7 @@ class ProductsController extends ChangeNotifier {
         description: e.description,
         id: e.id,
         product: e.product,
-        thumbnail: e.thumbnail,
+        thumbnail: "https://picsum.photos/200",
       );
     }).toList();
 

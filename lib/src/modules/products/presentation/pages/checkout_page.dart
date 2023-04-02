@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/constants.dart';
+import '../../../auth/presentation/pages/auth_page.dart';
 import '../../../auth/presentation/widgets/button_widget.dart';
 import '../controllers/products_controller.dart';
 import '../widgets/maps_widget.dart';
@@ -35,7 +36,10 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 Column(
                   children: const [
                     MapsWidget(),
-                    SizedBox(height: 32),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 32),
+                      child: DividerWidget(description: "Descrição"),
+                    ),
                     ResumeProductWidget(),
                   ],
                 ),

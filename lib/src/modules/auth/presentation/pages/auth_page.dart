@@ -56,32 +56,7 @@ class _AuthPageState extends State<AuthPage> {
                   onTap: () {},
                 ),
                 const SizedBox(height: 50),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text(
-                          Constants.orContinueWith,
-                          style: TextStyle(color: Colors.grey[700]),
-                        ),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                DividerWidget(description: Constants.orContinueWith),
                 const SizedBox(height: 30),
                 const SocialButtonWidget(),
                 const SizedBox(height: 50),
@@ -106,6 +81,44 @@ class _AuthPageState extends State<AuthPage> {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class DividerWidget extends StatelessWidget {
+  final String description;
+  const DividerWidget({
+    super.key,
+    required this.description,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      child: Row(
+        children: [
+          Expanded(
+            child: Divider(
+              thickness: 0.5,
+              color: Colors.grey[400],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Text(
+              description,
+              style: TextStyle(color: Colors.grey[700]),
+            ),
+          ),
+          Expanded(
+            child: Divider(
+              thickness: 0.5,
+              color: Colors.grey[400],
+            ),
+          ),
+        ],
       ),
     );
   }

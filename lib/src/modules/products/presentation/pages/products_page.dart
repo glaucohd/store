@@ -78,19 +78,28 @@ class _ProductsPageState extends State<ProductsPage> {
                                 borderRadius: BorderRadius.circular(8),
                                 child: Column(
                                   children: [
-                                    CachedNetworkImage(
-                                      imageUrl: controller
-                                              .listProducts[index].thumbnail ??
-                                          "-",
-                                      placeholder: (context, url) =>
-                                          const SizedBox(
-                                        height: 45,
-                                        child: Center(
-                                          child: CircularProgressIndicator(),
+                                    Container(
+                                      height: 134,
+                                      color: Colors.red,
+                                      child: CachedNetworkImage(
+                                        width: 190,
+                                        height: 134,
+                                        fit: BoxFit.cover,
+                                        imageUrl: controller.listProducts[index]
+                                                .thumbnail ??
+                                            "-",
+                                        placeholder: (context, url) =>
+                                            const SizedBox(
+                                          height: 45,
+                                          child: Center(
+                                            child: CircularProgressIndicator(
+                                              color: Colors.white,
+                                            ),
+                                          ),
                                         ),
+                                        errorWidget: (context, url, error) =>
+                                            const Icon(Icons.error),
                                       ),
-                                      errorWidget: (context, url, error) =>
-                                          const Icon(Icons.error),
                                     ),
                                     Container(
                                       color: Colors.grey.shade200,
